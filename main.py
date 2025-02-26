@@ -18,8 +18,9 @@ while maxnumofguests > 0: # While max isn't reached yet
     maxnumofguests -= 1 # Track # of guests added
 
 # Print invitation for each person
-for guest in guestlist:
-    print(f"\n\nYou're Invited!\n\nDear {guest},\n\nI would love for you to join me for a delightful evening of good food and great company. Let’s share a meal and make some wonderful memories together.\n\nPlease let me know if you can make it. I look forward to seeing you there!\n\nWarmly,\n\n{username}\n")
+for i in range(len(guestlist)):
+    guestlist.sort() # Print invites in aphabetical order
+    print(f"\n\nYou're Invited!\n\nDear {guestlist[i]},\n\nI would love for you to join me for a delightful evening of good food and great company. Let’s share a meal and make some wonderful memories together.\n\nPlease let me know if you can make it. I look forward to seeing you there!\n\nWarmly,\n\n{username}\n")
 
 # Ask user if they want to replace someone
 
