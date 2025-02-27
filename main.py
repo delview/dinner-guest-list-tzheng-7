@@ -23,9 +23,19 @@ for i in range(len(guestlist)):
     print(f"\n\nYou're Invited!\n\nDear {guestlist[i]},\n\nI would love for you to join me for a delightful evening of good food and great company. Let’s share a meal and make some wonderful memories together.\n\nPlease let me know if you can make it. I look forward to seeing you there!\n\nWarmly,\n\n{username}\n")
 
 # Ask user if they want to replace someone
+replace = input("\nWould you like to replace anyone? [Y]es/[N]o\n\n> ").strip().lower()
 
 # If yes, ask user for name of guest they want to replace & whom they want to replace them w
+while replace == 'y':
+    replacedguest = input("\nPlease enter the name of the person you would like to replace.\n\n> ").title().strip()
+    if replacedguest in guestlist:
+        guestlist.remove(replacedguest)
+    else:
+        print("\nSorry, that person is not on the list.")
 
 # Regenerate invitations
 
 # If no, exit program
+while replace == 'n':
+    print("\nHave a nice day <3")
+    break
